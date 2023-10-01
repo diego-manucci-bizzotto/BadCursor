@@ -5,7 +5,7 @@ import autoit
 import keyboard
 import requests
 
-url = 'http://localhost:3000/actions'
+url = 'https://badcursor.onrender.com/actions'
 
 
 def tremer():
