@@ -4,7 +4,12 @@ var router = express.Router();
 let actions = [];
 
 router.post('/actions', function (req, res, next) {
-    actions.push(req.body.action);
+    if(Array.isArray(req.body.action)){
+        actions = [...actions, ...req.body.action]
+    } else {
+        actions.push(req.body.action);
+    }
+
     res.send().ok;
 });
 
