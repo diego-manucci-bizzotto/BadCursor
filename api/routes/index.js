@@ -15,7 +15,7 @@ router.post('/actions', function (req, res, next) {
 
 router.get('/actions', function (req, res, next) {
     res.send(actions);
-    actions = actions.slice(1, actions.length);
+    actions = [];
 });
 
 module.exports = router;
